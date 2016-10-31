@@ -22,12 +22,12 @@ ecfr_clock.update_clock = function(data){
 
 
     $("#ecfr_clock").append(
-            '<p>As of ' + date +', there are<br><span style="font-size: 3em">' + data.wordcount.toLocaleString() +
+            '<p style="max-width: 100%;">As of ' + date +', there are<br><span style="font-size: 3em">' + data.wordcount.toLocaleString() +
             '</span><br>words in the <i>Code of Federal Regulations</i>,including <br><span style="font-size:2.5em">' +
             data.restrictions.toLocaleString() + '</span><br>regulatory restrictions.</p>'
             );
     $("#ecfr_clock").append(
-            'Reading ' + reading_speed + ' words per minute as as a full time job, ' +
+            '<p style="max-width: 100%;"Reading ' + reading_speed + ' words per minute as as a full time job, ' +
             'it would take<br><span style="font-size: 3em;">' + years + ' years, ' + days + ' days, ' + hours + ' hours and ' + minutes + ' minutes</span><br>to read the whole thing.</p>'
             );
 }

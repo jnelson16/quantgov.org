@@ -6,5 +6,6 @@ pullquote: The top 5 regulators over time
 title: Agencies
 ...
 
+{{ pullchart }}
 
 
