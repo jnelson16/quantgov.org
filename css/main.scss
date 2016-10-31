@@ -257,12 +257,13 @@ html, body {
             background-color: white;
             border-left: 1px solid $action-color;
             border-top: 1px solid $action-color;
+            border-right: 1px solid $action-color;
             &:last-child {
                 border-bottom: 1px solid $action-color;
             }
 
 
-            padding: 1em;
+            padding: .5em;
             display: block;
 
 
@@ -281,6 +282,8 @@ html, body {
         @include media($medium-screen) {
             border: 1px solid $action-color;
             width: 80%;
+            height: 25em;
+            overflow: auto;
 
             display: inline-block;
         }
@@ -316,6 +319,7 @@ html, body {
         display: block;
         padding-top: 1em;
         padding-bottom: 1em;
+        padding-left: .5em;
         font-weight: bold;
         color: $action-color;
         background-color: white;
