@@ -34,7 +34,7 @@ fedreg.get_time_series = function(year){
 }
 
 fedreg.update_chart = function(){
-    var subtitle = 'Through ' + fedreg.months[fedreg.today.getMonth()] + ' ' + fedreg.today.getDate() + ', the federal government has finalized ' + fedreg.all_rules.toLocaleString() + ' final rules, ' + fedreg.rules[fedreg.rules.length - 1] + ' of which have an economic impact of at least $100 million.';
+    var subtitle = 'Through ' + fedreg.months[fedreg.today.getMonth()] + ' ' + fedreg.today.getDate() + ', the federal government has finalized ' + fedreg.all_rules.toLocaleString() + ' final rules, ' + fedreg.rules[fedreg.rules.length - 1] + ' of which are deemed significant under Executive Order 12866.';
     Highcharts.chart('fedreg_chart', {
         chart: {type: 'column'},
         legend: {enabled: false},
