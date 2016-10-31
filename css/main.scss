@@ -25,7 +25,11 @@
 
 
 body, html{
+    font-size: .9rem;
     margin: 0;
+    @include media($medium-screen){
+        font-size: $base-font-size;
+    }
 }
 
 @include scale-headers(1.2);
@@ -36,11 +40,11 @@ h1, h2, h3, h4, h5, h6{
 
 
 
-
 #main-content{
     @include outer-container;
     margin-left: auto;
     margin-right: auto;
+    padding: 1em;
     ul {
         list-style-type: disc;
         margin-left: 2em;
@@ -51,9 +55,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .navigation-centered {
+    box-shadow: 0 0 .5em;
     padding: .5em;
     margin-bottom: 2em;
-
     width: 100%;
 
     // Mobile view
@@ -122,6 +126,7 @@ h1, h2, h3, h4, h5, h6{
 
         @include media($large-screen) {
             display: inline;
+            font-size: $base-font-size;
 
             a {
                 padding-right: 1em;
@@ -160,7 +165,6 @@ html, body {
 }
 
 .footer {
-    $large-screen: 50em !default;
 
     .footer-logo {
         margin-bottom: 1em;
@@ -202,6 +206,7 @@ html, body {
 .hero {
     padding: 1em;
     background-color: $light-gray;
+    background-image: url("{{site.url}}/resources/graphcoders-lil-fiber.png");
     width: 100%;
     min-height: 25em;
 }
@@ -291,10 +296,16 @@ html, body {
             table-layout: auto;
             margin: 0;
             th, td{
-                max-width: 20em;
+                max-width: 10em;
+                overflow: auto;
                 padding-left: .5em;
                 &:last-child{
                     padding-left: 0;
+                    padding-right: .5em;
+                }
+                @include media($medium-screen){
+                    max-width: 20em;
+                    overflow: unset;
                 }
             }
         };
