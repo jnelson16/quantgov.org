@@ -283,6 +283,7 @@ html, body {
             table-layout: auto;
             margin: 0;
             th, td{
+                max-width: 20em;
                 padding-left: .5em;
                 &:last-child{
                     padding-left: 0;
@@ -328,7 +329,7 @@ html, body {
     }
 
     .card-image {
-        min-height: 20em;
+        height: 25em;
         overflow: hidden;
 
         img, iframe{

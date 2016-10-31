@@ -33,7 +33,7 @@ title: Data Produced with QuantGov
 
       {% assign file = line.url | split: '/' | last %}
 
-      {% assign extension = line.file | split: '.' | last %}
+      {% assign extension = file | split: '.' | last %}
       {% case  extension %}
       {% when "zip" %}
       {% assign icon =  "fa-file-archive-o" %}
