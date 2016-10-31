@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Research Featuring QuantGov Data
 ...
 
 ## Original Research
