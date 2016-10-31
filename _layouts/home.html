@@ -1,0 +1,12 @@
+---
+layout: base
+---
+{% for hero in site.tags.hero limit:1 %}
+<h1> Featured Chart </h1>
+<section class="hero">
+  <figure class="hero-grid">
+    <span class="hero-chart"> {{ hero.pullchart | markdownify }} </span>
+    <figcaption class="hero-quote "><a href={{site.url}}{{hero.url}}>{{ hero.pullquote | markdownify }}</a></figcaption>
+  </figure>
+</section>
+{% endfor %}

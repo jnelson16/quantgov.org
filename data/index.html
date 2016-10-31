@@ -1,0 +1,50 @@
+---
+layout: page
+title: Data Produced with QuantGov
+---
+<h2>Datasets</h2>
+<div class="vertical-tabs-container">
+  <div class="vertical-tabs">
+    {% assign last_product = "" %}
+    {% for line in site.data.datasets %}
+    {% if line.product != last_product %}
+
+    <a href="javascript:void(0)" class="js-vertical-tab vertical-tab " rel="{{line.product | slugify}}"><span class="fa fa-folder fa-lg"></span>&nbsp;{{line.product}}</a>
+    {% assign last_product = line.product %}
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="vertical-tab-content-container">
+    {% assign last_product = "" %}
+    {% for line in site.data.datasets %}
+    {% if line.product != last_product %}
+    {% unless last_product == "" %}
+    </table>
+  </div>
+  {% endunless %}
+  <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="{{line.product | slugify }}"><span class="fa fa-folder fa-lg"></span>&nbsp;{{line.product}}</a>
+  <div id="{{line.product | slugify}}" class="js-vertical-tab-content vertical-tab-content">
+    {{ line.note | markdownify }}
+    <table>
+      <tr><th>File</th><th>Description</th><th></th></tr>
+      {% assign last_product = line.product %}
+      {% endif %}
+
+      {% assign file = line.url | split: '/' | last %}
+
+      {% assign extension = line.file | split: '.' | last %}
+      {% case  extension %}
+      {% when "zip" %}
+      {% assign icon =  "fa-file-archive-o" %}
+      {% when "csv" %}
+      {% assign icon  = "fa-table" %}
+      {% else %}
+      {% assign icon = "fa-file" %}
+      {% endcase %}
+
+      <tr><td><span class="fa {{icon}} fa-lg"></span>&nbsp;{{file}}</td><td>{{line.description}}</td><td class="left-align"><a href="{{line.url}}" class='fa fa-download fa-lg'></a></td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>

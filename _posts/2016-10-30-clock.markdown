@@ -1,0 +1,9 @@
+---
+layout: post
+pullchart: |
+    <script src="/js/applets/ecfr_clock.js"></script>
+title: The Quantgov Regulatory Clock
+...
+
+{{ page.pullchart }}
+

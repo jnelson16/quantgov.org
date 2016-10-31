@@ -1,0 +1,7 @@
+type,component,description,url
+Corpus,Generic Corpus,A base corpus for customization that serves files out of a folder,
+Corpus,CFR,The Code of Federal Regulations at the year-title-part level from 1997-2015,
+Corpus,eCFR,The daily-updated  Electronic Code of Federal Regulations at the tite-part level,
+Corpus,Federal Register,All documents in the Federal Register from 2000-present,
+Estimator,Generic Estimator,A base estimator for classification that trains a Random Forests classifier,
+Estimator,NAICS 2007,A classifier that non-exclusively classifies documents among the industries of the 2007 NAICS standard,

@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Quantgov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{site.url}}/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Sans" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/g/jquery@3.1.1,highcharts@4.2.6,modernizr@3.3.1"></script>
+  </head>
+  <body>
+
+    <div class="wrapper-for-content-outside-of-footer">
+
+      <header class="navigation-centered" role="banner">
+        <div class="navigation-centered-wrapper">
+          <h1 class="logo-title"><a href="{{site.url}}">QuantGov</a></h1>
+          <a href="javascript:void(0)" id="js-navigation-centered-mobile-menu" class="navigation-centered-mobile-menu fa fa-bars"></a>
+          <nav role="navigation">
+            <ul id="js-navigation-centered-menu" class="navigation-centered-menu show">
+              <li class="nav-link"><a href="{{site.url}}/about">About</a></li>
+              <li class="nav-link"><a href="{{site.url}}/posts">Charts and Updates</a></li>
+              <li class="nav-link"><a href="{{site.url}}/research">Research</a></li>
+              <li class="nav-link"><a href="{{site.url}}/data">Data</a></li>
+              <li class="nav-link"><a href="{{site.url}}/platform">Platform</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      {{content}}
+    </div>
+    <footer class="footer" role="contentinfo">
+      <h1 class="footer-logo"><a href="{{site.url}}">QuantGov</a></h1>
+      <ul>
+        <li><a href="{{site.url}}/about">About</a></li>
+        <li><a href="{{site.url}}/posts">Charts and Updates</a></li>
+        <li><a href="{{site.url}}/research">Research</a></li>
+        <li><a href="{{site.url}}/data">Data</a></li>
+        <li><a href="{{site.url}}/platform">Platform</a></li>
+      </ul>
+    </footer>
+    <script src="{{site.url}}/js/main.js"></script>
+    <script>
+window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
