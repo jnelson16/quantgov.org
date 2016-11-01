@@ -22,6 +22,21 @@
     a, a:hover, a:visited, a:active {color: $base-font-color;}
 }
 
+@mixin beta{
+    &:after{
+        content: "BETA";
+        font-family: $base-font-family;
+        font-size: .25em;
+        background-color: $action-color;
+        color: white;
+        padding: .25em;
+        border-radius: .25em;
+
+        font-variant: normal;
+        font-weight: bold;
+    }
+}
+
 
 
 body, html{
@@ -61,6 +76,7 @@ h1, h2, h3, h4, h5, h6{
 
     // Mobile view
     .logo-title {
+        @include beta;
         display:inline;
         float: left;
         font-size: 2em;
@@ -166,6 +182,7 @@ html, body {
 .footer {
 
     .footer-logo {
+        @include beta;
         margin-bottom: 1em;
         margin-right: 1em;
         font-size: 1.5em;
