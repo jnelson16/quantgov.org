@@ -4,7 +4,7 @@ pullchart: |
     <script src="/js/applets/fedreg_stats.js"></script>
 pullquote: 'A daily tally of the number of rules in the *Federal Register*'
 tags: hero
-title: Federal Register Stats
+title: Significant Rules Tracker
 permalink: /significant_rules_chart/
 ...
 
