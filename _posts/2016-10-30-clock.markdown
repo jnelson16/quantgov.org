@@ -2,7 +2,7 @@
 layout: page
 pullchart: |
     <script src="/js/applets/ecfr_clock.js"></script>
-title: The Quantgov Regulatory Clock
+title: The QuantGov Regulatory Clock
 permalink: /regclock/
 pullquote: A daily updated word and restriction count of the [Electronic Code of Federal Regulations](http://www.ecfr.gov/)
 ...
