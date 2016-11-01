@@ -1,9 +1,14 @@
 ---
-layout: post
+layout: page
 pullchart: |
     <script src="/js/applets/ecfr_clock.js"></script>
 title: The Quantgov Regulatory Clock
+permalink: /regclock
+pullquote: A daily updated word and restriction count of the [Electronic Code of Federal Regulations](http://www.ecfr.gov/)
 ...
 
 {{ page.pullchart }}
+
+### How the Reg Clock Works:
+This page is updated every day with word and restriction counts from the latest version of the [Electronic Code of Federal Regulations](http://www.ecfr.gov/). The data are obtained using the [ecfr corpus](https://github.com/QuantGov/corpus/tree/ecfr), which is built on the [QuantGov Platform](http://quantgov.org/platform).
 
