@@ -5,17 +5,17 @@ layout: page
 <div class="cards">
   {% for post in paginator.posts %}
   <div class="card">
-    <div class="card-image">
-      {{post.pullchart}}
-    </div>
-    <a href="{{site.url}}{{post.url}}">
-      <header class="card-header">
+    <header class="card-header">
+      <a href="{{site.url}}{{post.url}}">
         <h4>{{post.title | markdownify}}</h4>
-      </header>
-      <div class="card-copy">
-        {{post.pullquote | markdownify}}
-      </div>
-    </a>
+      </a>
+    </header>
+    <figure class="card-image">
+      {{post.pullchart}}
+    <figcaption class="card-copy">
+    <a href="{{site.url}}{{post.url}}">{{post.pullquote | markdownify}} </a>
+    </figcaption>
+    </figure>
   </div>
 
   {% endfor %}

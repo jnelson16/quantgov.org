@@ -357,22 +357,18 @@ html, body {
 
 // Cards
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     @include uncolor-links;
-
+    @include outer-container;
     .card {
-        flex-basis:25em;
-        flex-grow: 1;
-        margin: 0 1em;
+        margin-bottom: 5em;
+        @include media($large-screen){
+            @include span-columns(1 of 2);
+            @include omega(2n);
+        }
     }
 
     .card-image {
-        height: 25em;
-        overflow: hidden;
-
-        img, iframe{
+        img, iframe, svg{
             width: 100%;
         }
     }
@@ -392,7 +388,5 @@ html, body {
 }
 
 .plotly{
-    width: 100%;
-    height: 25em;
     border: none;
 }
