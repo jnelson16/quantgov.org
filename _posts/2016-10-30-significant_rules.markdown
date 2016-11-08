@@ -1,6 +1,7 @@
 ---
 layout: post
 pullchart: |
+    <div id="sig_rules_chart"></div>
     <script src="/js/applets/fedreg_stats.js"></script>
 pullquote: 'A daily tally of the number of rules in the *Federal Register*'
 tags: hero

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{site.url}}/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Sans" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/g/jquery@3.1.1,highcharts@4.2.6,modernizr@3.3.1"></script>
+    <script type='text/javascript'>window.q=[];window.$=function(f){q.push(f)}</script>
   </head>
   <body>
 
@@ -40,11 +40,15 @@
         <li><a href="{{site.url}}/platform">Platform</a></li>
       </ul>
     </footer>
-    <script src="{{site.url}}/js/main.js"></script>
     <script>
 window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
 ga('create','UA-86588008-1','auto');ga('send','pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js "></script>
+    <script src="https://cdn.jsdelivr.net/g/jquery@3.1.1,modernizr@3.3.1"></script>
+    <script type='text/javascript'>$.each(q,function(index,f){$(f)});</script>
+    <script src="{{site.url}}/js/main.js"></script>
   </body>
 </html>
