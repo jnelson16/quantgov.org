@@ -1,0 +1,98 @@
+.vertical-tabs-container {
+
+    @include clearfix;
+
+    .vertical-tabs {
+        display: none;
+
+        @include media($medium-screen) {
+            display: inline;
+            float: left;
+            width: 20%;
+        }
+    }
+
+    .vertical-tab {
+        @include media($medium-screen) {
+            color: $action-color;
+            background-color: white;
+            border-left: 1px solid $action-color;
+            border-top: 1px solid $action-color;
+            border-right: 1px solid $action-color;
+            &:last-child {
+                border-bottom: 1px solid $action-color;
+            }
+
+
+            padding: .5em;
+            display: block;
+
+
+            &.is-active {
+                font-weight: bolder;
+                color: white;
+                background-color: $action-color;
+            }
+        }
+    }
+
+    .vertical-tab-content-container {
+        display: block;
+        margin-bottom: 1em;
+
+        @include media($medium-screen) {
+            border: 1px solid $action-color;
+            width: 80%;
+            height: 25em;
+            overflow: auto;
+
+            display: inline-block;
+        }
+    }
+
+    .vertical-tab-content {
+        @include media($medium-screen) {
+            display: none;
+        }
+        p {padding: .5em;}
+        table{
+            table-layout: auto;
+            margin: 0;
+            th, td{
+                max-width: 10em;
+                overflow: auto;
+                padding-left: .5em;
+                &:last-child{
+                    padding-left: 0;
+                    padding-right: .5em;
+                }
+                @include media($medium-screen){
+                    max-width: 20em;
+                    overflow: unset;
+                }
+            }
+        };
+
+    }
+
+    .vertical-tab-accordion-heading {
+        cursor: pointer;
+        display: block;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: .5em;
+        font-weight: bold;
+        color: $action-color;
+        background-color: white;
+        border: 1px solid $action-color;
+        &.is-active {
+            color: white;
+            background-color: $action-color;
+            font-weight: bolder;
+        }
+
+        @include media($medium-screen) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+body, html{
+    font-size: .9rem;
+    margin: 0;
+    @include media($medium-screen){
+        font-size: $base-font-size;
+    }
+}
+
+
+@include scale-headers($major-third);
+h1, h2, h3, h4, h5, h6{
+    a, a:hover, a:visited, a:active {color: $base-font-color;}
+}
+
+#main-content{
+    @include outer-container;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    ul {
+        list-style-type: disc;
+        margin-left: 2em;
+    }
+    p, li {max-width: 50rem;}
+
+
+}
+
+.logo{
+    @include beta;
+    font-variant: small-caps;
+    font-size: 2em;
+}

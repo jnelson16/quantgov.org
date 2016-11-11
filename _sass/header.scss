@@ -1,0 +1,68 @@
+body{
+    margin-top: 4em;
+}
+
+#site-header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: $action-color;
+    color: white;
+    padding: .5em;
+    @include uncolor-links(white);
+    h1 {
+        display:inline;
+    }
+
+}
+
+
+#site-nav{
+    display: inline;
+    @include media($medium-screen){
+        float: right;
+        display: block;
+        padding: .5em;
+    }
+}
+
+#nav-expander{
+    float: right;
+    padding: .5em;
+    a{
+        padding: .5em;
+    }
+    @include media($medium-screen){
+        display: none;
+    }
+}
+
+#nav-links{
+    width: 100%;
+    @include media($medium-screen){
+        display: block;
+    }
+
+    &.hide{
+        display: none;
+        @include media($medium-screen){
+            display: block;
+        }
+    }
+
+
+    li{
+        display: block;
+        width: 100%;
+        text-align: right;
+        float: right;
+        @include media($medium-screen){
+            display: inline;
+            float: none;
+        }
+        a {
+            padding: .5em;
+        }
+    }
+}

@@ -7,34 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{site.url}}/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
     <script type='text/javascript'>window.q=[];window.$=function(f){q.push(f)}</script>
   </head>
   <body>
-
     <div class="wrapper-for-content-outside-of-footer">
+      <header id="site-header">
+        <h1 class="logo"><a href="{{site.url}}">QuantGov</a></h1>
+        <nav id="site-nav">
+        <span id="nav-expander"><a class="fa fa-bars"></a></span>
+        <ul id="nav-links" class="hide">
+          <li><a href="{{site.url}}/about">About</a></li>
+          <li><a href="{{site.url}}/posts">Charts</a></li>
+          <li><a href="{{site.url}}/research">Research</a></li>
+          <li><a href="{{site.url}}/data">Data</a></li>
+          <li><a href="{{site.url}}/platform">Platform</a></li>
+        </ul>
+        </nav>
 
-      <header class="navigation-centered" role="banner">
-        <div class="navigation-centered-wrapper">
-          <h1 class="logo-title"><a href="{{site.url}}">QuantGov</a></h1>
-          <a href="javascript:void(0)" id="js-navigation-centered-mobile-menu" class="navigation-centered-mobile-menu fa fa-bars"></a>
-          <nav role="navigation">
-            <ul id="js-navigation-centered-menu" class="navigation-centered-menu show">
-              <li class="nav-link"><a href="{{site.url}}/about">About</a></li>
-              <li class="nav-link"><a href="{{site.url}}/posts">Charts and Updates</a></li>
-              <li class="nav-link"><a href="{{site.url}}/research">Research</a></li>
-              <li class="nav-link"><a href="{{site.url}}/data">Data</a></li>
-              <li class="nav-link"><a href="{{site.url}}/platform">Platform</a></li>
-            </ul>
-          </nav>
-        </div>
       </header>
+
       {{content}}
     </div>
     <footer class="footer" role="contentinfo">
-      <h1 class="footer-logo"><a href="{{site.url}}">QuantGov</a></h1>
+      <h1 class="logo footer-logo"><a href="{{site.url}}">QuantGov</a></h1>
       <ul>
         <li><a href="{{site.url}}/about">About</a></li>
-        <li><a href="{{site.url}}/posts">Charts and Updates</a></li>
+        <li><a href="{{site.url}}/posts">Charts</a></li>
         <li><a href="{{site.url}}/research">Research</a></li>
         <li><a href="{{site.url}}/data">Data</a></li>
         <li><a href="{{site.url}}/platform">Platform</a></li>

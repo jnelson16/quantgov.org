@@ -1,0 +1,27 @@
+@mixin scale-headers($scale: $perfect-fourth){
+    h6{font-size: modular-scale(1, $base-font-size, $scale)};
+    h5{font-size: modular-scale(2, $base-font-size, $scale)};
+    h4{font-size: modular-scale(3, $base-font-size, $scale)};
+    h3{font-size: modular-scale(4, $base-font-size, $scale)};
+    h2{font-size: modular-scale(5, $base-font-size, $scale)};
+    h1{font-size: modular-scale(6, $base-font-size, $scale)};
+}
+
+@mixin uncolor-links($color: $base-font-color){
+    a, a:hover, a:visited, a:active {color: $color;}
+}
+
+@mixin beta{
+    &:after{
+        content: "BETA";
+        font-family: $base-font-family;
+        font-size: .25em;
+        background-color: $action-color;
+        color: white;
+        padding: .25em;
+        border-radius: .25em;
+
+        font-variant: normal;
+        font-weight: bold;
+    }
+}

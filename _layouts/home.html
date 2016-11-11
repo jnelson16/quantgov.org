@@ -1,8 +1,13 @@
 ---
 layout: base
 ---
+
+<header role="banner">
+  <h1 class="logo" id="site-title"><a href="{{site.url}}">QuantGov</a></h1>
+</header>
+
 {% for hero in site.tags.hero limit:1 %}
-<h1> Featured Chart </h1>
+<header id="feature-header"><h1> Featured Chart </h1></header>
 <section class="hero">
   <figure class="hero-grid">
     <span class="hero-chart"> {{ hero.pullchart | markdownify }} </span>

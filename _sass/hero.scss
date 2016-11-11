@@ -1,0 +1,43 @@
+.hero {
+    padding: 1em;
+    background-color: $action-color;
+    width: 100%;
+    min-height: 25em;
+    margin-bottom: 5em;
+
+    .hero-grid {
+        position: relative;
+        background-color: white;
+
+        @include outer-container;
+
+        .hero-chart {
+            @include span-columns(1 of 1);
+
+            @include media($medium-screen) {
+                @include span-columns(9);
+            }
+        }
+
+        .hero-quote {
+            @include span-columns(1 of 1);
+
+            @include uncolor-links;
+
+            text-align: center;
+            padding: 1em;
+
+            @include media($medium-screen) {
+                @include span-columns(3);
+
+                position: absolute;
+                top: 50%;
+
+                @include prefixer(transform, translateY(-50%));
+
+                right: 1em;
+            }
+        }
+    }
+}
+

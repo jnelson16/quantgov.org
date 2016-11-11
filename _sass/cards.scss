@@ -1,0 +1,17 @@
+.cards {
+    @include uncolor-links;
+    @include outer-container;
+    .card {
+        margin-bottom: 5em;
+        @include media($large-screen){
+            @include span-columns(1 of 2);
+            @include omega(2n);
+        }
+    }
+
+    .card-image {
+        img, iframe, svg{
+            width: 100%;
+        }
+    }
+}
