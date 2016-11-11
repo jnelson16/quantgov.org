@@ -77,7 +77,7 @@ $(function(){
                 error: function(){
                     console.log('Retrying ' + president.name + ', page ' + page);
                     setTimeout(function(){
-                        midnight_reg_tracker(president, page);
+                        midnight_reg_tracker.get_possible_rules(president, page);
                     }, 2000);
                 },
                 success: function(data) {
@@ -196,7 +196,7 @@ $(function(){
             title: {text: 'Midnight Rules by President'},
             subtitle: {text: 'as of ' + today.getDate() + ' ' + months[today.getMonth()] + ' ' + today.getFullYear()},
             credits: {
-                text: "Source: Federal Register. Produced by QuantGov",
+                text: "Source: Federal Register. Produced by QuantGov.",
                 href: "http://quantgov.org"
             },
             xAxis: {categories: categories},

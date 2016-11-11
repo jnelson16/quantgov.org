@@ -5,10 +5,15 @@ $(function(){
     fedreg.today = new Date();
     fedreg.thisyear = fedreg.today.getFullYear();
     for(var year = 1996; year <= fedreg.thisyear; year++){
+        var cache = false;
+        if (year == fedreg.thisyear){
+            cache = true;
+        }
         fedreg.years.push({
             year: year,
             sigrules: null,
             ready: false,
+            cache: cache,
         });
     }
     fedreg.all_rules = null;
@@ -24,6 +29,7 @@ $(function(){
                 "conditions[publication_date][year]": year.year,
             },
             dataType: "jsonp",
+            cache: year.cache,
             success: function(data){
                 console.log("Finished " + year.year);
                 year.sigrules = data['count'];
@@ -34,29 +40,29 @@ $(function(){
                     }
                 }
                 fedreg.update_chart();
+            },
+            error: function(){
+                console.log("Retrying " + year.year);
+                setTimeout(function(){
+                    fedreg.get_year_data(year);
+                }, 2000)
             }
         });
     }
 
     fedreg.update_chart = function(){
-        var years = [];
         var sigrules = [];
         for (var i = 0; i < fedreg.years.length; i++){
-            years.push(fedreg.years[i].year);
             sigrules.push(fedreg.years[i].sigrules);
         }
         var subtitle = 'Through ' + fedreg.months[fedreg.today.getMonth()] + ' ' + fedreg.today.getDate() + ', the federal government has finalized ' + fedreg.all_rules.toLocaleString() + ' final rules, ' + fedreg.years[fedreg.years.length - 1].sigrules + ' of which are deemed significant under Executive Order 12866.';
-        Highcharts.chart('sig_rules_chart', {
-            chart: {type: 'column'},
-            legend: {enabled: false},
-            title: {text: 'Significant Final Rules'},
+        fedreg.chart.series[0].setData(sigrules);
+        fedreg.chart.update({
             subtitle: {text: subtitle},
-            xAxis: {categories: years},
-            yAxis: {title:{enabled: false}},
-            series: [{name: 'Significant Final Rules', data: sigrules}],
-            credits: {href: 'http://federalregister.gov', text: "Source: Federal Register. Produced by QuantGov."}
-
-        })
+            exporting: {enabled: true},
+            yAxis: { visible: true },
+        });
+        fedreg.chart.hideLoading();
     };
 
     fedreg.init = function() {
@@ -73,9 +79,27 @@ $(function(){
                 fedreg.all_rules = data['count'];
             }
         });
+        var startvals = [];
+        var years = [];
         for (var i = 0; i < fedreg.years.length; i++){
+            startvals.push(0);
+            years.push(fedreg.years[i].year)
             fedreg.get_year_data(fedreg.years[i]);
         }
+        fedreg.chart = Highcharts.chart('sig_rules_chart', {
+            chart: {type: 'column'},
+            legend: {enabled: false},
+            title: {text: 'Significant Final Rules'},
+            xAxis: {categories: years},
+            yAxis: {
+                title:{enabled: false},
+                visible: false,
+            },
+            series: [{name: 'Significant Final Rules', data: startvals}],
+            credits: {href: 'http://federalregister.gov', text: "Source: Federal Register. Produced by QuantGov."},
+            exporting: {enabled: false},
+        })
+        fedreg.chart.showLoading()
     }
 
     $(fedreg.init);
