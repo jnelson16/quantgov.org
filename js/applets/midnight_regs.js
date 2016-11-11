@@ -8,6 +8,7 @@ $(function(){
         midnights_nonsig: [],
         midnights_sig: [],
         ready: false,
+        cache: true,
     }, {
         name: 'Bill Clinton, 2nd Term',
         year: 2000,
@@ -16,6 +17,7 @@ $(function(){
         midnights_nonsig: [],
         midnights_sig: [],
         ready: false,
+        cache: true,
     }, {
         name: 'George W. Bush, 1st Term',
         year: 2004,
@@ -24,6 +26,7 @@ $(function(){
         midnights_nonsig: [],
         midnights_sig: [],
         ready: false,
+        cache: true,
     }, {
         name: 'George W. Bush, 2nd Term',
         year: 2008,
@@ -32,6 +35,7 @@ $(function(){
         midnights_nonsig: [],
         midnights_sig: [],
         ready: false,
+        cache: true,
     }, {
         name: 'Barack Obama, 1st Term',
         year: 2012,
@@ -40,6 +44,7 @@ $(function(){
         midnights_nonsig: [],
         midnights_sig: [],
         ready: false,
+        cache: true,
     }, {
         name: 'Barack Obama, 2nd Term',
         year: 2016,
@@ -48,6 +53,7 @@ $(function(){
         midnights_nonsig: [],
         midnights_sig: [],
         ready: false,
+        cache: true,
     }];
 
     midnight_reg_tracker.get_possible_rules = function(president, page) {
@@ -67,6 +73,13 @@ $(function(){
                     'conditions[publication_date][lte]': (president.year + 1) + '-01-20'
                 },
                 dataType: 'jsonp',
+                cache: president.cache,
+                error: function(){
+                    console.log('Retrying ' + president.name + ', page ' + page);
+                    setTimeout(function(){
+                        midnight_reg_tracker(president, page);
+                    }, 2000);
+                },
                 success: function(data) {
                     var reg;
                     for (var i = 0; i < data.results.length; i++) {
@@ -86,8 +99,7 @@ $(function(){
                     } else {
                         midnight_reg_tracker.identify_midnights(president);
                     }
-                },
-                error: window.console.log
+                }
     });
     }
     midnight_reg_tracker.identify_midnights = function(president, page) {
@@ -104,6 +116,14 @@ $(function(){
                     'conditions[publication_date][lte]': (president.year + 1) + '-01-20'
                 },
                 dataType: 'jsonp',
+                cache: president.cache,
+                error: function(data){
+                    console.log('Retrying ' + president.name + ', page ' + page);
+                    setTimeout(function(){
+                        midnight_reg_tracker.identify_midnights(president, page);
+                    },
+                    2000);
+                },
                 success: function(data) {
                     var reg;
                     if (data.count == 0) {
@@ -138,8 +158,7 @@ $(function(){
                         }
                         midnight_reg_tracker.display();
                     }
-                },
-                error: console.log
+                }
         });
     }
     
