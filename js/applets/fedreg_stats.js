@@ -1,25 +1,51 @@
-var fedreg = fedreg || {};
+var sigrules = sigrules || {};
 $(function(){
-    fedreg.years = new Array();
-    fedreg.rules = new Array();
-    fedreg.today = new Date();
-    fedreg.thisyear = fedreg.today.getFullYear();
-    for(var year = 1996; year <= fedreg.thisyear; year++){
-        var cache = false;
-        if (year == fedreg.thisyear){
-            cache = true;
+    sigrules.years = new Array();
+    sigrules.rules = new Array();
+    sigrules.today = new Date();
+    sigrules.thisyear = sigrules.today.getFullYear();
+    var preloaded = {
+        1996: 307,
+        1997: 268,
+        1998: 242,
+        1999: 231,
+        2000: 290,
+        2001: 297,
+        2002: 284,
+        2003: 337,
+        2004: 321,
+        2005: 259,
+        2006: 163,
+        2007: 180,
+        2008: 426,
+        2009: 371,
+        2010: 424,
+        2011: 425,
+        2012: 357,
+        2013: 332,
+        2014: 307,
+        2015: 302,
+    };
+    for(var year = 1996; year <= sigrules.thisyear; year++){
+        var year_sigrules = null;
+        var ready = false;
+        if (year in preloaded){
+            year_sigrules = preloaded[year];
+            ready = true;
         }
-        fedreg.years.push({
+        sigrules.years.push({
             year: year,
-            sigrules: null,
-            ready: false,
-            cache: cache,
+            sigrules: year_sigrules,
+            ready: ready,
         });
     }
-    fedreg.all_rules = null;
-    fedreg.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    sigrules.all_rules = null;
+    sigrules.months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    fedreg.get_year_data = function(year){
+    sigrules.get_year_data = function(year){
+        if (year.ready){
+            return;
+        }
         $.ajax("http://www.federalregister.gov/api/v1/documents.json", {
             data: {
                 "fields[]": "type",
@@ -29,64 +55,63 @@ $(function(){
                 "conditions[publication_date][year]": year.year,
             },
             dataType: "jsonp",
-            cache: year.cache,
             success: function(data){
                 console.log("Finished " + year.year);
                 year.sigrules = data['count'];
                 year.ready = true;
-                for (var i = 0; i < fedreg.years.length; i++){
-                    if (!fedreg.years[i].ready){
+                for (var i = 0; i < sigrules.years.length; i++){
+                    if (!sigrules.years[i].ready){
                         return;
                     }
                 }
-                fedreg.update_chart();
+                sigrules.update_chart();
             },
             error: function(){
                 console.log("Retrying " + year.year);
                 setTimeout(function(){
-                    fedreg.get_year_data(year);
+                    sigrules.get_year_data(year);
                 }, 2000)
             }
         });
     }
 
-    fedreg.update_chart = function(){
-        var sigrules = [];
-        for (var i = 0; i < fedreg.years.length; i++){
-            sigrules.push(fedreg.years[i].sigrules);
+    sigrules.update_chart = function(){
+        var series = [];
+        for (var i = 0; i < sigrules.years.length; i++){
+            series.push(sigrules.years[i].sigrules);
         }
-        var subtitle = 'Through ' + fedreg.months[fedreg.today.getMonth()] + ' ' + fedreg.today.getDate() + ', the federal government has finalized ' + fedreg.all_rules.toLocaleString() + ' final rules, ' + fedreg.years[fedreg.years.length - 1].sigrules + ' of which are deemed significant under Executive Order 12866.';
-        fedreg.chart.series[0].setData(sigrules);
-        fedreg.chart.update({
+        var subtitle = 'Through ' + sigrules.months[sigrules.today.getMonth()] + ' ' + sigrules.today.getDate() + ', the federal government has finalized ' + sigrules.all_rules.toLocaleString() + ' final rules, ' + sigrules.years[sigrules.years.length - 1].sigrules + ' of which are deemed significant under Executive Order 12866.';
+        sigrules.chart.series[0].setData(series);
+        sigrules.chart.update({
             subtitle: {text: subtitle},
             exporting: {enabled: true},
             yAxis: { visible: true },
         });
-        fedreg.chart.hideLoading();
+        sigrules.chart.hideLoading();
     };
 
-    fedreg.init = function() {
+    sigrules.init = function() {
 
         $.ajax("http://www.federalregister.gov/api/v1/documents.json", {
             data: {
                 "fields[]": "type",
                 "per_page": 2,
                 "conditions[type]": "RULE",
-                "conditions[publication_date][year]": fedreg.thisyear,
+                "conditions[publication_date][year]": sigrules.thisyear,
             },
             dataType: "jsonp",
             success: function(data){
-                fedreg.all_rules = data['count'];
+                sigrules.all_rules = data['count'];
             }
         });
         var startvals = [];
         var years = [];
-        for (var i = 0; i < fedreg.years.length; i++){
+        for (var i = 0; i < sigrules.years.length; i++){
             startvals.push(0);
-            years.push(fedreg.years[i].year)
-            fedreg.get_year_data(fedreg.years[i]);
+            years.push(sigrules.years[i].year)
+            sigrules.get_year_data(sigrules.years[i]);
         }
-        fedreg.chart = Highcharts.chart('sig_rules_chart', {
+        sigrules.chart = Highcharts.chart('sig_rules_chart', {
             chart: {type: 'column'},
             legend: {enabled: false},
             title: {text: 'Significant Final Rules'},
@@ -99,8 +124,8 @@ $(function(){
             credits: {href: 'http://federalregister.gov', text: "Source: Federal Register. Produced by QuantGov."},
             exporting: {enabled: false},
         })
-        fedreg.chart.showLoading()
+        sigrules.chart.showLoading()
     }
 
-    $(fedreg.init);
+    $(sigrules.init);
 });

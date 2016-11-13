@@ -2,58 +2,39 @@ var midnight_reg_tracker = {};
 $(function(){
     midnight_reg_tracker.presidents = [{
         name: 'Bill Clinton, 1st Term',
-        year: 1996,
-        election_day: 5,
-        possibles: [],
-        midnights_nonsig: [],
-        midnights_sig: [],
-        ready: false,
-        cache: true,
+        midnights_nonsig: 56,
+        midnights_sig: 15,
+        ready: true,
     }, {
         name: 'Bill Clinton, 2nd Term',
-        year: 2000,
-        election_day: 7,
-        possibles: [],
-        midnights_nonsig: [],
-        midnights_sig: [],
-        ready: false,
-        cache: true,
+        midnights_nonsig: 63,
+        midnights_sig: 14,
+        ready: true,
     }, {
         name: 'George W. Bush, 1st Term',
-        year: 2004,
-        election_day: 2,
-        possibles: [],
-        midnights_nonsig: [],
-        midnights_sig: [],
-        ready: false,
-        cache: true,
+        midnights_nonsig: 47,
+        midnights_sig: 18,
+        ready: true,
     }, {
         name: 'George W. Bush, 2nd Term',
-        year: 2008,
-        election_day: 4,
-        possibles: [],
-        midnights_nonsig: [],
-        midnights_sig: [],
-        ready: false,
-        cache: true,
+        midnights_nonsig: 74,
+        midnights_sig: 30,
+        ready: true,
     }, {
         name: 'Barack Obama, 1st Term',
-        year: 2012,
-        election_day: 6,
-        possibles: [],
-        midnights_nonsig: [],
-        midnights_sig: [],
-        ready: false,
-        cache: true,
+        midnights_nonsig: 49,
+        midnights_sig: 13,
+        ready: true,
     }, {
         name: 'Barack Obama, 2nd Term',
         year: 2016,
         election_day: 8,
         possibles: [],
-        midnights_nonsig: [],
-        midnights_sig: [],
+        midnights_nonsig_rins: [],
+        midnights_sig_rins: [],
+        midnights_nonsig: null,
+        midnights_sig: null,
         ready: false,
-        cache: true,
     }];
 
     midnight_reg_tracker.get_possible_rules = function(president, page) {
@@ -136,12 +117,12 @@ $(function(){
                             continue;
                         }
                         if (reg.significant){
-                            if ($.inArray(rin, president.midnights_sig) == -1 && $.inArray(rin, president.possibles) != -1) {
-                                president.midnights_sig.push(rin);
+                            if ($.inArray(rin, president.midnights_sig_rins) == -1 && $.inArray(rin, president.possibles) != -1) {
+                                president.midnights_sig_rins.push(rin);
                             }
                         } else {
-                            if ($.inArray(rin, president.midnights_nonsig) == -1 && $.inArray(rin, president.possibles) != -1) {
-                                president.midnights_nonsig.push(rin);
+                            if ($.inArray(rin, president.midnights_nonsig_rins) == -1 && $.inArray(rin, president.possibles) != -1) {
+                                president.midnights_nonsig_rins.push(rin);
                             }
                         }
                     }
@@ -150,6 +131,8 @@ $(function(){
                         midnight_reg_tracker.identify_midnights(idx, page + 1);
                     } else {
                         console.log("Done with " + president.name);
+                        president.midnights_sig = president.midnights_sig_rins.length;
+                        president.midnights_nonsig = president.midnights_nonsig_rins.length;
                         president.ready = true;
                         for (var i = 0; i < midnight_reg_tracker.presidents.length; i++){
                             if (!midnight_reg_tracker.presidents[i].ready){
@@ -166,8 +149,8 @@ $(function(){
         var nonsig = [];
         var sig = [];
         for (var i = 0; i < midnight_reg_tracker.presidents.length; i++){
-            sig.push(midnight_reg_tracker.presidents[i].midnights_sig.length);
-            nonsig.push(midnight_reg_tracker.presidents[i].midnights_nonsig.length);
+            sig.push(midnight_reg_tracker.presidents[i].midnights_sig);
+            nonsig.push(midnight_reg_tracker.presidents[i].midnights_nonsig);
         }
 
         midnight_reg_tracker.chart.series[0].setData(nonsig);
@@ -185,7 +168,9 @@ $(function(){
     var categories = [];
     for (var i = 0; i < midnight_reg_tracker.presidents.length; i++){
         president = midnight_reg_tracker.presidents[i];
-        midnight_reg_tracker.get_possible_rules(president);
+        if (!president.ready){
+            midnight_reg_tracker.get_possible_rules(president);
+        }
         categories.push(president.name);
     }
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
