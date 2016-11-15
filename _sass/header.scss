@@ -1,5 +1,5 @@
 body{
-    margin-top: 4em;
+    margin-top: 6em;
 }
 
 #site-header{
@@ -11,25 +11,22 @@ body{
     color: white;
     padding: .5em;
     @include uncolor-links(white);
-    h1 {
-        display:inline;
-    }
-
 }
 
-
-#site-nav{
-    display: inline;
-    @include media($medium-screen){
-        float: right;
-        display: block;
-        padding: .5em;
+#header-title{
+    float: left;
+    h1{
+        display:inline;
+    }
+    p {
+        margin: 0;
     }
 }
 
 #nav-expander{
-    float: right;
-    padding: .5em;
+    position: absolute;
+    top: 1.5em;
+    right: .5em;
     a{
         padding: .5em;
     }
@@ -40,8 +37,14 @@ body{
 
 #nav-links{
     width: 100%;
+    position: absolute;
+    top: 4em;
+    right: 0;
+    background-color: $action-color;
     @include media($medium-screen){
         display: block;
+        top: 1.75em;
+        width: auto;
     }
 
     &.hide{
@@ -57,6 +60,8 @@ body{
         width: 100%;
         text-align: right;
         float: right;
+        padding-top: .25em;
+        padding-bottom: .25em;
         @include media($medium-screen){
             display: inline;
             float: none;
