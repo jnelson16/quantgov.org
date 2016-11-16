@@ -11,4 +11,4 @@ layout: post
 </div>
 
 #### What this Chart Tells Us:
-As different administrative agencies promulgate or repeal regulations, the composition of the *Code of Federal Regulations* changes over time. Using data from RegData 2.2 (available from the [data page]({{site.url}}/data}, this chart traces the increase in the number of restrictions authored by the top five regulatory agencies as of 2014, covering the years from 1975-2014. 
+As different administrative agencies promulgate or repeal regulations, the composition of the *Code of Federal Regulations* changes over time. Using data from RegData 2.2 (available from the [data page]({{site.url}}/data), this chart traces the increase in the number of restrictions authored by the top five regulatory agencies as of 2014, covering the years from 1975-2014. 
