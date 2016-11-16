@@ -4,9 +4,7 @@ title: Research Featuring QuantGov Data
 ...
 
 The research papers, congressional testimonies, and other studies listed below used data derived from the QuantGov platform as a
-component of the research. If you have used QuantGov or RegData in a research project, please email Oliver Sherouse
-(osherouse@mercatus.gmu.edu) or Patrick McLaughlin (pmclaughlin@mercatus.gmu.edu) explaining how you used the platform, and your
-research will be posted to this page.
+component of the research. If you have used QuantGov or RegData in a research project, please email us at <info@quantgov.org> to be added to this list.
 
 ### Original Research
 
