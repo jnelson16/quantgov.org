@@ -9,8 +9,8 @@ pullquote: A daily updated word and restriction count of the [Electronic Code of
 
 {{ page.pullchart }}
 
-### What the Reg Clock Tells Us:
-The QuantGov regulatory clock gives a daily-updated count of the number of words and restrictions in the Electronic Code of Federal Regulations (eCFR). As administrative agencies finalize new regulations, they are added to the eCFR, increasing the word and restriction count. As the number of words and regulatory restrictions increases, this increases the number of rules that businesses and individuals must follow in order to remain compliant with federal law. The clock shows that it would take several years for an individual to read the entire *Code of Federal Regulations* if it was their full-time job (i.e. they read the CFR at 250 words per minute, 40 hours a week, 50 weeks a year).
+### What the Reg Clock Means:
+The QuantGov regulatory clock gives a daily-updated count of the number of words and restrictions in the [Electronic Code of Federal Regulations (eCFR)](http://www.ecfr.gov/). The eCFR is continually updated and amended by the Office of the Federal Register and the Government Printing Office as administrative agencies finalize new regulation, allowing for up-to-date analysis of the regulatory code. The Reg Clock gives the number of individual regulatory restrictions---words or phrases that indicate a specific mandate or prohibition---and words are included in the most recent eCFR, and shows how long it would take a single person to read the entire Code as their full time job: 250 words per minute, 40 hours per week, 50 weeks a year. 
 
 ### How the Reg Clock Works:
 This page is updated every day with word and restriction counts from the latest version of the [Electronic Code of Federal Regulations](http://www.ecfr.gov/). The data are obtained using the [ecfr corpus](https://github.com/QuantGov/corpus/tree/ecfr), which is built on the [QuantGov Platform](http://quantgov.org/platform).
