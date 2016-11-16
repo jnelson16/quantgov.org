@@ -2,14 +2,15 @@
 layout: base
 ---
 
-<header role="banner">
-  <h1 class="logo" id="site-title"><a href="{{site.url}}">QuantGov</a></h1>
+<header role="banner" id="site-title">
+  <h1 class="logo"><a href="{{site.url}}">QuantGov</a></h1>
+  <h6>A New Home for Open Source Policy Analytics</h6>
 </header>
 
 {% for hero in site.tags.hero limit:1 %}
-<header id="feature-header"><h1> Featured Chart </h1></header>
 <section class="hero">
   <figure class="hero-grid">
+    <header id="hero-header"><h2> Featured Chart </h2></header>
     <span class="hero-chart"> {{ hero.pullchart | markdownify }} </span>
     <figcaption class="hero-quote "><a href={{site.url}}{{hero.url}}>{{ hero.pullquote | markdownify }}</a></figcaption>
   </figure>

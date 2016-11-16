@@ -11,6 +11,10 @@
 
         @include outer-container;
 
+        #hero-header {
+            @include span-columns(1 of 1);
+            padding-left: .5em;
+        }
         .hero-chart {
             @include span-columns(1 of 1);
 
