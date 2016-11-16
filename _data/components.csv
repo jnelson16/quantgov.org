@@ -3,5 +3,5 @@ Corpus,Generic Corpus,A base corpus for customization that serves files out of a
 Corpus,CFR,The Code of Federal Regulations at the year-title-part level from 1997-2015,https://github.com/QuantGov/corpus/archive/cfr.zip,https://github.com/QuantGov/corpus/tree/cfr
 Corpus,eCFR,The daily-updated  Electronic Code of Federal Regulations at the tite-part level,https://github.com/QuantGov/corpus/archive/ecfr.zip,https://github.com/QuantGov/corpus/tree/ecfr
 Corpus,Federal Register,All documents in the Federal Register from 2000-present,https://github.com/QuantGov/corpus/archive/federal_register.zip,https://github.com/QuantGov/corpus/tree/federal_register
-Estimator,Generic Estimator,A base estimator for customization that trains a Random Forests classifier,https://github.com/QuantGov/estimator/archive/master.zip,https://github.org/quantgov/estimator
-Project,Generic Project,A base project for customization,https://github.com/QuantGov/project/archive/master.zip,https://github.org/quantgov/project
+Estimator,Generic Estimator,A base estimator for customization that trains a Random Forests classifier,https://github.com/QuantGov/estimator/archive/master.zip,https://github.com/quantgov/estimator
+Project,Generic Project,A base project for customization,https://github.com/QuantGov/project/archive/master.zip,https://github.com/quantgov/project
