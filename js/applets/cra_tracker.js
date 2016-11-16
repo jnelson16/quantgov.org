@@ -3,15 +3,21 @@ $(function(){
     cra_tracker.start_date = "2016-05-27";
      
 
+    cra_tracker.parse_date = function(datestr){
+        var bits = datestr.split('-');
+        return new Date(parseInt(bits[0]), parseInt(bits[1]) - 1, parseInt(bits[2]));
+    }
     cra_tracker.init_chart = function(){
         cra_tracker.dates = [];
         cra_tracker.data = [];
         var startdata = [];
-        var now = Date.now()
-        for (var date = new Date(Date.parse(cra_tracker.start_date)); date.getTime() <= now; date.setDate(date.getDate() + 1)){
-            cra_tracker.dates.push(date.getTime());
+        var now = Date.now();
+        var date = cra_tracker.parse_date(cra_tracker.start_date);
+        while (date.getTime() < now){
+            cra_tracker.dates.push('' + date.getFullYear() + "-"  + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2));
             startdata.push(0);
             cra_tracker.data.push(0);
+            date = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
         }
         var today = new Date();
         var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -23,7 +29,7 @@ $(function(){
                 type: 'column',
                 data: startdata,
                 name: "Significant Rules Published Subject to the CRA",
-                pointStart: Date.parse(cra_tracker.start_date),
+                pointStart: cra_tracker.parse_date(cra_tracker.start_date).getTime(),
                 pointInterval: 24 * 60 * 60 * 1000,
             }],
             exporting: {
@@ -70,7 +76,7 @@ $(function(){
                 for (var i = 0; i < data.results.length; i++){
                     var reg = data.results[i];
                     if (do_chart){
-                        cra_tracker.data[cra_tracker.dates.indexOf(Date.parse(reg.publication_date))] += 1;
+                        cra_tracker.data[cra_tracker.dates.indexOf(reg.publication_date)] += 1;
                     }
                     if (do_table){
                         rows.push([reg.publication_date, '<a href="' + reg.html_url + '" target="_blank">' + reg.title + '</a>', reg.agency_names.join(', '), reg.topics.join(', ')]);
