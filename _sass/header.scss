@@ -21,16 +21,20 @@ body{
     p {
         margin: 0;
     }
+    img {
+        height: 2em;
+        vertical-align: middle;
+    }
 }
 
 #nav-expander{
     position: absolute;
-    top: 1.5em;
+    top: 1.75em;
     right: .5em;
     a{
         padding: .5em;
     }
-    @include media($medium-screen){
+    @include media($large-screen){
         display: none;
     }
 }
@@ -38,10 +42,10 @@ body{
 #nav-links{
     width: 100%;
     position: absolute;
-    top: 4em;
+    top: 5em;
     right: 0;
     background-color: $action-color;
-    @include media($medium-screen){
+    @include media($large-screen){
         display: block;
         top: 1.75em;
         width: auto;
@@ -49,7 +53,7 @@ body{
 
     &.hide{
         display: none;
-        @include media($medium-screen){
+        @include media($large-screen){
             display: block;
         }
     }
@@ -62,7 +66,7 @@ body{
         float: right;
         padding-top: .25em;
         padding-bottom: .25em;
-        @include media($medium-screen){
+        @include media($large-screen){
             display: inline;
             float: none;
         }
