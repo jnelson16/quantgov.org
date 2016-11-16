@@ -3,7 +3,10 @@ layout: page
 title: Research Featuring QuantGov Data
 ...
 
-## Original Research
+The research papers, congressional testimonies, and other studies listed below used data derived from the QuantGov platform as a
+component of the research. If you have used QuantGov or RegData in a research project, please email us at <info@quantgov.org> to be added to this list.
+
+### Original Research
 
 -   Bailey, James and Diana Thomas. [“Regulating Away Competition: The
     Effect of Regulation on Entrepreneurship and
@@ -70,7 +73,8 @@ title: Research Featuring QuantGov Data
     Mercatus Working Paper. Arlington, VA: Mercatus Center at George
     Mason University, March 2014.
 
-## Other Studies and Congressional Testimony
+
+### Other Studies and Congressional Testimony
 
 -   Carew, Diana. [“FDA Regulation in the Data-Driven
     Economy.”](http://www.progressivepolicy.org/wp-content/uploads/2014/10/2014.10-Carew_FDA-Regulation-in-the-Data-Driven-Economy.pdf)

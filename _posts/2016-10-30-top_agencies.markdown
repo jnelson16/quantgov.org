@@ -10,5 +10,5 @@ layout: post
     <script data-plotly="TRichards89:82"  src="https://plot.ly/embed.js" async></script>
 </div>
 
-#### Source
-This chart uses data from RegData 2.2 to show the growth in regulation from the top five regulators through 2014. 
+#### What this Chart Tells Us:
+As different administrative agencies promulgate or repeal regulations, the composition of the *Code of Federal Regulations* changes over time. Using data from RegData 2.2 (available from the [data page]({{site.url}}/data}, this chart traces the increase in the number of restrictions authored by the top five regulatory agencies as of 2014, covering the years from 1975-2014. 
