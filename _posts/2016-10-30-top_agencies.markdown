@@ -11,8 +11,4 @@ layout: post
 </div>
 
 #### What this Chart Tells Us:
-As different administrative agencies pass and (rarely) repeal regulations, the composition of the *Code of Federal Regulations* changes over time. This chart traces the increase in the number of restrictions imposed by the top five regulatory agencies through 2014. Most prominently is the significant increase in restrictions from the EPA in the last 30 years.
-
-
-#### Source:
-This chart uses data from RegData 2.2 to show the growth in regulation from the top five regulators through 2014. 
+As different administrative agencies promulgate or repeal regulations, the composition of the *Code of Federal Regulations* changes over time. Using data from RegData 2.2 (available from the [data page]({{site.url}}/data}, this chart traces the increase in the number of restrictions authored by the top five regulatory agencies as of 2014, covering the years from 1975-2014. 
