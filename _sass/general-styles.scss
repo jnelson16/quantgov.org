@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5, h6{
     font-size: 2em;
 }
 
-article a{
-    font-weight:bold;
+article a{font-weight: bold;}
+header.article-header{margin-bottom: 3em; }
+h1.article-title{margin-bottom:0}
+p.author, p.date{
+    margin-bottom: 0;
+    font-style: italic;
 }
+footer.article-footer{margin-top: 3em;}

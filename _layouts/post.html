@@ -2,6 +2,24 @@
 layout: base
 ---
 <article id="main-content">
-  <h1>{{page.title}}</h1>
+  <header class="article-header">
+    <h1 class="article-title">{{page.title}}</h1>
+    <p class="author">Authored by
+    {% if page.authors %}
+    {% for author in page.authors %}{% unless forloop.first or forloop.length == 2 %}, {% endunless %}{% if forloop.length != 1 and forloop.last %}and {% endif %}<a href="#{{author}}" rel="author">{{site.data.authors[author].name}}</a>{% endfor %}
+    {% else %}The QuantGov Team
+    {% endif %}</p>
+    <p class="date">Posted {{page.date | date: "%a, %b %d, %Y"}}</p>
+  </header>
   {{content}}
+  {% if page.authors %}
+    <footer class='article-footer'>
+    <h6>About the {% if page.authors.size == 1 %}Author{% else %}Authors{% endif %}</h6>
+    <ul>
+        {% for author_id in page.authors %}
+        {% assign author = site.data.authors[author_id] %}
+        <li><a id="{{author_id}}" href="{{author.mercatus_bio}}" rel="author" target="_blank">{{author.name}}</a>{% if author.twitter %} (<a href="http://twitter.com/{{author.twitter}}" target="_blank">@{{author.twitter}}</a>){% endif %} is a {{author.title}} at the Mercatus Center at George Mason University.</li>
+        {% endfor %}
+    </footer>
+  {% endif %}</p>
 </article>
