@@ -16,6 +16,9 @@ component of the research. If you have used QuantGov or RegData in a research pr
 -   Barrage, Lint. [“Is Regulatory Rulemaking State-Contingent? An
     Empirical Analysis.”](http://lintbarrage.com/research)
     Working Paper. December 2014.
+-   Bessen, James. ["Accounting for Rising Corporate Profits: 
+    Intangibles or Regulatory Rents?"](http://www.bu.edu/law/files/2016/05/Accounting-for-Rising-Corporate-Profits.pdf)
+    Boston University School of Law & Economics Working Paper. May 2016.
 -   Chambers, Dustin and Courtney A. Collins. “[How Do Federal
     Regulations Affect Consumer Prices? An Analysis of the Regressive
     Effects
@@ -47,6 +50,9 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Industry](http://www.research.lancs.ac.uk/portal/en/publications/rd-investments-profitability-and-regulation-of-the-pharmaceutical-industry(f5970be9-db8f-43ee-a856-2f9a10eae7e4).html).”
     Department of Accounting and Finance Working Paper AF2014/15WP05.
     Lancaster, UK: Lancaster University. 2014
+-   Gutierrez, German, Thomas Philippon. ["Investment-less Growth:
+    An Empirical Investigation"] (http://www.nber.org/papers/w22897)
+    NBER Working Paper. December 2016.
 -   Hall, Joshua C., Robert A. Lawson, and Saurav Roychoudhury.
     [“Creating the Environment for Entrepreneurship through Economic
     Freedom.”](http://www.be.wvu.edu/phd_economics/pdf/15-01.pdf) WVU
