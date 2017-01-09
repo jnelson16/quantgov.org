@@ -3,6 +3,10 @@ $(function(){
     cra_tracker.start_date = "2016-06-07";
     cra_tracker.enddates = [
         {
+            end: "January 3", 
+            start: "2016-06-13",
+        },
+        {
             end: "December 16", 
             start: "2016-06-07",
         },
