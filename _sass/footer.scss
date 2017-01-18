@@ -1,9 +1,10 @@
+$large-screen-footer-size: 4rem;
 .wrapper-for-content-outside-of-footer {
-    padding-top: 6em;
+    padding-top: 4em;
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -4em;
+    margin: 0 auto -1 * $large-screen-footer-size;
 }
 
 html, body {
@@ -16,48 +17,58 @@ html, body {
 }
 
 .footer, .wrapper-for-content-outside-of-footer:after {
-    $large-screen: 50em !default;
-    height: 12em;
-
+    height: 16rem;
     @include media($large-screen) {
-        height: 4em;
+        height: $large-screen-footer-size;
     }
 }
 
 .footer {
     background-color: $dark-gray;
     color: white;
+    padding: 1rem;
     @include uncolor-links(white);
-
-    .footer-logo {
-        @include beta;
-        margin-top: .5em;
-        margin-right: 1em;
-
+     
+    #footer-description{
+        line-height: 2em;
+        margin: 0;
+        padding: 0;
         @include media($large-screen) {
             float: left;
-            margin-bottom: 0;
+        }
+        img {
+            height: 2em;
+            width: 12em;
+            vertical-align: middle;
         }
     }
 
     ul {
-        margin: 0;
-        padding-left: 0;
-
-        @include media($large-screen) {
+        @include media($large-screen){
+            display: block;
             float: right;
-            padding-top: 1.5em;
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            margin-right: -.5rem;
         }
-
-        li {
-            line-height: 1.5em;
-            padding-right: 1em;
-
-            @include media($large-screen) {
+        li{
+            margin-top: 1em;
+            display: block;
+            width: 100%;
+            text-align: left;
+            @include media($large-screen){
+                margin-top: 0;
                 display: inline;
-                line-height: 1em;
-                text-align: left;
+                float: none;
+            }
+            a {
+                display: block;
+                @include media($large-screen){
+                    display: inline;
+                    padding: 0 .5rem;
+                }
             }
         }
     }
 }
+
