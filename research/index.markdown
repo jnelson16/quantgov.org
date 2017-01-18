@@ -6,19 +6,14 @@ title: Research Featuring QuantGov Data
 The research papers, congressional testimonies, and other studies listed below used data derived from the QuantGov platform as a
 component of the research. If you have used QuantGov or RegData in a research project, please email us at <info@quantgov.org> to be added to this list.
 
-### Original Research
+### Research Using QuantGov and RegData
 
+#### Mercatus Research
 -   Bailey, James and Diana Thomas. [“Regulating Away Competition: The
     Effect of Regulation on Entrepreneurship and
     Employment.”](http://mercatus.org/publication/regulating-away-competition-effect-regulation-entrepreneurship-and-employment)
     Mercatus Working Paper. Arlington, VA: Mercatus Center at George
     Mason University, September 2015.
--   Barrage, Lint. [“Is Regulatory Rulemaking State-Contingent? An
-    Empirical Analysis.”](http://lintbarrage.com/research)
-    Working Paper. December 2014.
--   Bessen, James. ["Accounting for Rising Corporate Profits: 
-    Intangibles or Regulatory Rents?"](http://www.bu.edu/law/files/2016/05/Accounting-for-Rising-Corporate-Profits.pdf)
-    Boston University School of Law & Economics Working Paper. May 2016.
 -   Chambers, Dustin and Courtney A. Collins. “[How Do Federal
     Regulations Affect Consumer Prices? An Analysis of the Regressive
     Effects
@@ -45,28 +40,6 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Process.”](http://mercatus.org/publication/legislative-impact-accounting-rethinking-how-account-policies-economic-costs-federal)
     Mercatus Working Paper. Arlington, VA: Mercatus Center at George
     Mason University, June 2015.
--   Goncharov, Igor, Jörg Mahlich and B. Burcin Yurtoglu. “[R&D
-    Investments, Profitability and Regulation of the Pharmaceutical
-    Industry](http://www.research.lancs.ac.uk/portal/en/publications/rd-investments-profitability-and-regulation-of-the-pharmaceutical-industry(f5970be9-db8f-43ee-a856-2f9a10eae7e4).html).”
-    Department of Accounting and Finance Working Paper AF2014/15WP05.
-    Lancaster, UK: Lancaster University. 2014
--   Gutierrez, German, Thomas Philippon. ["Investment-less Growth:
-    An Empirical Investigation"] (http://www.nber.org/papers/w22897)
-    NBER Working Paper. December 2016.
--   Hall, Joshua C., Robert A. Lawson, and Saurav Roychoudhury.
-    [“Creating the Environment for Entrepreneurship through Economic
-    Freedom.”](http://www.be.wvu.edu/phd_economics/pdf/15-01.pdf) WVU
-    Department of Economics Working Paper No. 15-01. Morgantown, WV:
-    West Virginia University, 2015.
--   Fouirnaies, Alexander and Andrew B. Hall. [“The Exposure Theory of
-    Access: Why Some Firms Seek More Access to Incumbents Than
-    Others.”](http://polmeth.wustl.edu/media/Paper/FouirnaiesHallRegulation.pdf) St.
-    Louis, MO: Society for Political Methodology, April 2014.
--   Goldschlag, Nathan and Alexander T. Tabarrok. [“Is Regulation to
-    Blame for the Decline in American
-    Entrepreneurship?”](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2559803)
-    GMU Working Paper in Economics No. 15-11. Fairfax, VA: George Mason
-    University, December 2014.
 -   McLaughlin, Patrick A. and Richard Williams. [“The Consequences of
     Regulatory Accumulation and a Proposed
     Solution.”](http://mercatus.org/publication/consequences-regulatory-accumulation-and-proposed-solution)
@@ -78,9 +51,42 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Efficiency.”](http://mercatus.org/publication/regulatory-reform-florida-opportunity-greater-competitiveness-and-economic-efficiency)
     Mercatus Working Paper. Arlington, VA: Mercatus Center at George
     Mason University, March 2014.
+-   Peirce, Hester and James Broughel. [Dodd-Frank: What It Does and Why
+    It’s Flawed.]() Arlington, VA: Mercatus Center at George Mason
+    University, 2013.
+
+#### Non-Mercatus Research
+-   Barrage, Lint. [“Is Regulatory Rulemaking State-Contingent? An
+    Empirical Analysis.”](http://lintbarrage.com/research)
+    Working Paper. December 2014.
+-   Bessen, James. ["Accounting for Rising Corporate Profits: 
+    Intangibles or Regulatory Rents?"](http://www.bu.edu/law/files/2016/05/Accounting-for-Rising-Corporate-Profits.pdf)
+    Boston University School of Law & Economics Working Paper. May 2016. 
+-   Fouirnaies, Alexander and Andrew B. Hall. [“The Exposure Theory of
+    Access: Why Some Firms Seek More Access to Incumbents Than
+    Others.”](http://polmeth.wustl.edu/media/Paper/FouirnaiesHallRegulation.pdf) St.
+    Louis, MO: Society for Political Methodology, April 2014.
+-   Goldschlag, Nathan and Alexander T. Tabarrok. [“Is Regulation to
+    Blame for the Decline in American
+    Entrepreneurship?”](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2559803)
+    GMU Working Paper in Economics No. 15-11. Fairfax, VA: George Mason
+    University, December 2014.
+-   Goncharov, Igor, Jörg Mahlich and B. Burcin Yurtoglu. “[R&D
+    Investments, Profitability and Regulation of the Pharmaceutical
+    Industry](http://www.research.lancs.ac.uk/portal/en/publications/rd-investments-profitability-and-regulation-of-the-pharmaceutical-     industry(f5970be9-db8f-43ee-a856-2f9a10eae7e4).html).”
+    Department of Accounting and Finance Working Paper AF2014/15WP05.
+    Lancaster, UK: Lancaster University. 2014
+-   Gutierrez, German, Thomas Philippon. ["Investment-less Growth:
+    An Empirical Investigation"] (http://www.nber.org/papers/w22897)
+    NBER Working Paper. December 2016.
+-   Hall, Joshua C., Robert A. Lawson, and Saurav Roychoudhury.
+    [“Creating the Environment for Entrepreneurship through Economic
+    Freedom.”](http://www.be.wvu.edu/phd_economics/pdf/15-01.pdf) WVU
+    Department of Economics Working Paper No. 15-01. Morgantown, WV:
+    West Virginia University, 2015.
 
 
-### Other Studies and Congressional Testimony
+### Short-Form Writings and Congressional Testimony
 
 -   Carew, Diana. [“FDA Regulation in the Data-Driven
     Economy.”](http://www.progressivepolicy.org/wp-content/uploads/2014/10/2014.10-Carew_FDA-Regulation-in-the-Data-Driven-Economy.pdf)
@@ -120,12 +126,7 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Burdens?”](http://www.fed-soc.org/publications/detail/epas-retrospective-review-of-regulations-will-it-reduce-manufacturing-burdens)
     Engage: The Journal of the Federalist Society Practice Groups
     14, no. 2 (July 2013).
--   Peirce, Hester and James Broughel. [Dodd-Frank: What It Does and Why
-    It’s Flawed.]() Arlington, VA: Mercatus Center at George Mason
-    University, 2013.
 -   Yandle, Bruce. [“The Economic
     Situation.”](http://mercatus.org/publication/economic-situation-september-2012) Commentary.
     Arlington, VA: Mercatus Center at George Mason University,
     September 2012.
-
-
