@@ -77,7 +77,7 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Department of Accounting and Finance Working Paper AF2014/15WP05.
     Lancaster, UK: Lancaster University. 2014
 -   Gutierrez, German, Thomas Philippon. ["Investment-less Growth:
-    An Empirical Investigation"] (http://www.nber.org/papers/w22897)
+    An Empirical Investigation"](http://www.nber.org/papers/w22897)
     NBER Working Paper. December 2016.
 -   Hall, Joshua C., Robert A. Lawson, and Saurav Roychoudhury.
     [“Creating the Environment for Entrepreneurship through Economic
