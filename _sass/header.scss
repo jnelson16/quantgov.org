@@ -45,8 +45,8 @@
     background-color: $action-color;
     @include media($large-screen){
         display: block;
-        top: 1.5em;
-        right: .5rem;
+        top: 1rem;
+        right: 0;
         width: auto;
     }
 
@@ -61,7 +61,8 @@
     li{
         display: block;
         width: 100%;
-        text-align: right;
+        text-align: center;
+        height: 3rem;
         float: right;
         padding-top: .25em;
         padding-bottom: .25em;
@@ -71,6 +72,19 @@
         }
         a {
             padding: .5em;
+            width: 100%
         }
+    }
+}
+
+#site-search {
+    display: inline;
+    input {
+        width: 16em;
+        display: inline;
+    }
+
+    button {
+        padding: .5rem;
     }
 }
