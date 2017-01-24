@@ -25,3 +25,10 @@
         font-weight: bold;
     }
 }
+
+@mixin card{
+    background-color: rgb(200, 200, 200);
+    background-image: url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
+    padding: 1rem;
+    border-radius: .5rem;
+}

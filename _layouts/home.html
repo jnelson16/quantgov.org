@@ -6,13 +6,32 @@ layout: base
   <h1 class="logo"><a href="{{site.url}}">QuantGov</a></h1>
   <h6>A New Home for Open Source Policy Analytics</h6>
 </header>
-
-{% for hero in site.tags.hero limit:1 %}
-<section class="hero">
-  <figure class="hero-grid">
-    <header id="hero-header"><h2> Featured Chart </h2></header>
-    <span class="hero-chart"> {{ hero.pullchart | markdownify }} </span>
-    <figcaption class="hero-quote "><a href={{site.url}}{{hero.url}}>{{ hero.pullquote | markdownify }}</a></figcaption>
-  </figure>
+<section id="main-content">
+{{ content }}
+<div id="navcards">
+  <div class="navcard">
+    <a href="{{site.url}}/posts/">
+    <header><h1>Charts</h1><header>
+        <p>Interactive data visualizations</p>
+    </a>
+  </div>
+  <div class="navcard">
+    <a href="{{site.url}}/research">
+    <header><h1>Research</h1><header>
+        <p>Research employing the QuantGov platform or data</p>
+    </a>
+  </div>
+  <div class="navcard">
+    <a href="{{site.url}}/data">
+    <header><h1>Data</h1><header>
+        <p>Datasets produced using the QuantGov platform</p>
+    </a>
+  </div>
+  <div class="navcard">
+    <a href="{{site.url}}/platform">
+    <header><h1>Platform</h1><header>
+        <p>The Open-Source QuantGov Platform and components</p>
+    </a>
+  </div>
+</div>
 </section>
-{% endfor %}

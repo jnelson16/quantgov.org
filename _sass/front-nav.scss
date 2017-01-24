@@ -13,3 +13,27 @@
 #feature-header{
     @include outer-container;
 }
+
+#navcards{
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    @include media($large-screen){
+        max-width: 60rem;
+    }
+    div.navcard{
+        @include card;
+        height: 12em;
+        margin-bottom: 1rem;
+        @include span-columns(1 of 1);
+        @include media(min-width $medium-screen max-width $large-screen){
+            @include span-columns(1 of 2);
+            @include omega(2n);
+        }
+        @include media($large-screen){
+            @include span-columns(1 of 4);
+            @include omega(4n);
+            margin-bottom: 0;
+        }
+    }
+}

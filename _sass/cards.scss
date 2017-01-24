@@ -1,12 +1,10 @@
 .cards {
     @include uncolor-links;
     @include outer-container;
+    max-width: 60rem;
     .card {
+        @include card;
         margin-bottom: 5em;
-        @include media($large-screen){
-            @include span-columns(1 of 2);
-            @include omega(2n);
-        }
     }
 
     .card-image {
