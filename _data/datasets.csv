@@ -1,15 +1,16 @@
-product,url,description,note
-RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_by_2-digit_industry.csv,"RegData 2.2 annual total industry-relevant restrictions and words  for 2-digit NAICS industries, 1975-2014","If you use this data, please cite:<br>Al-Ubaydli, O. and McLaughlin, P.A. (2015) ""RegData: A numerical database on industry-specific regulations for all United States industries and federal regulations, 1997-2012."" *Regulation & Governance*, doi: [10.1111/rego.12107](http://dx.doi.org/10.1111/rego.12107)."
+product,url,description,cite
+RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_by_2-digit_industry.csv,"RegData 2.2 annual total industry-relevant restrictions and words  for 1-digit NAICS industries, 1975-2014","Al-Ubaydli, O. and McLaughlin, P.A. (2015) ""RegData: A numerical database on industry-specific regulations for all United States industries and federal regulations, 1997-2012."" *Regulation & Governance*, doi: [10.1111/rego.12107](http://dx.doi.org/10.1111/rego.12107)."
 RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_by_3-digit_industry.csv,"RegData 2.2 annual total industry-relevant restrictions and words  for 3-digit NAICS industries, 1975-2014",
 RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_by_4-digit_industry.csv,"RegData 2.2 annual total industry-relevant restrictions and words  for 4-digit NAICS industries, 1975-2014",
 RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_by_agency.csv,"RegData 2.2 annual total restrictions by agency and department, 1975-2014",
 RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_by_bea_industry.csv,"RegData 2.2 annual total industry-relevant restrictions and words  for BEA industries, 1975-2014",
 RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2.zip,RegData 2.2 full part-level dataset,
 RegData,https://s3.amazonaws.com/quantgov-datasets/regdata/RegData_2_2_unfiltered.zip,"RegData 2.2 full part-level dataset, including probability estimates for industries with low-performing classifiers",
-CFR,https://s3.amazonaws.com/quantgov-datasets/cfr/cfr_totals_by_year_2016-10-30.csv,"Annual total words and restrictions in the Code of Federal Regulations, 1997-2015",
+CFR,https://s3.amazonaws.com/quantgov-datasets/cfr/cfr_totals_by_year_2016-10-30.csv,"Annual total words and restrictions in the Code of Federal Regulations, 1997-2015","Al-Ubaydli, O. and McLaughlin, P.A. (2015) ""RegData: A numerical database on industry-specific regulations for all United States industries and federal regulations, 1997-2012."" *Regulation & Governance*, doi: [10.1111/rego.12107](http://dx.doi.org/10.1111/rego.12107)."
 CFR,https://s3.amazonaws.com/quantgov-datasets/cfr/regulatory_restrictions_by_year_and_agency_2016-10-30.csv,"Annual total words and restrictions by agency, 1997-2015",
 CFR,https://s3.amazonaws.com/quantgov-datasets/cfr/regulatory_restrictions_by_year_and_agency_2016-10-30.csv,"Part-level words and restrictions, 1997-2015, with some titles in 1996",
 eCFR,https://s3.amazonaws.com/quantgov-datasets/ecfr/ecfr_by_agency_2016-10-30.csv,Total words and restrictions in the eCFR by agency,
 eCFR,https://s3.amazonaws.com/quantgov-datasets/ecfr/ecfr_2016-10-30.zip,"Part-level words and restrictions, in the eCFR",
 Federal Register,https://s3.amazonaws.com/quantgov-datasets/federal_register/documents_by_year_and_type.csv,Number of documents in the Federal Register by year and document type,
 Federal Register,https://s3.amazonaws.com/quantgov-datasets/federal_register/federal_register_2016-10-31.zip,"Document-level words and restrictions in the Federal Register, 2000-2015",
+Executive Orders,https://s3.amazonaws.com/quantgov-datasets/eos/executive-orders_metadata_2017-01-25.zip,"Words and restrictions for Executive Orders collected by the American Presidency Project",

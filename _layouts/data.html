@@ -28,7 +28,13 @@ title: Data Produced with QuantGov
   {% endunless %}
   <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading is-active" rel="{{line.product | slugify }}"><span class="fa fa-folder fa-lg"></span>&nbsp;{{line.product}}</a>
   <div id="{{line.product | slugify}}" class="js-vertical-tab-content vertical-tab-content">
-    {{ line.note | markdownify }}
+    <p>If you use this data, please cite:</p>
+    {% if line.cite %}
+      {% assign cite = line.cite %}
+    {% else %}
+      {% capture cite %}McLaughlin, Patrick A. and Oliver Sherouse (2017) "QuantGov---A Policy Analytics Platform." <http://docs.quantgov.org/quantgov_working_paper.pdf> {% endcapture %}
+    {% endif %}
+    {{ cite | markdownify }}
     <table>
       <tr><th>File</th><th>Description</th><th></th></tr>
       {% assign last_product = line.product %}
