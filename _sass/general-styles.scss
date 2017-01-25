@@ -21,7 +21,18 @@ h1, h2, h3, h4, h5, h6{
         list-style-type: disc;
         margin-left: 2em;
     }
-    p, li {max-width: 50rem;}
+    p, ul, h1, h2, h3, h4, h5, h6{
+        max-width: 50rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header, footer {
+        text-align: center;
+        p, ul, h1, h2, h3, h4, h5, h6 {
+            max-width: 100%;
+        }
+        li {text-align: left;}
+    }
 
 
 }
