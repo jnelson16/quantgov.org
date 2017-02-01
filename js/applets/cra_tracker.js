@@ -52,8 +52,14 @@ $(function(){
         cra_tracker.data = [];
         var startdata = [];
         var now = Date.now();
+        var end;
+        if (now > cra_tracker.parse_date("2017-01-20")){
+            end = cra_tracker.parse_date("2017-01-20");
+        } else {
+            end = now;
+        }
         var date = cra_tracker.parse_date(cra_tracker.start_date);
-        while (date.getTime() < now){
+        while (date.getTime() < end){
             cra_tracker.dates.push('' + date.getFullYear() + "-"  + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2));
             startdata.push(0);
             cra_tracker.data.push(0);
@@ -131,10 +137,9 @@ $(function(){
         $.ajax('https://www.federalregister.gov/api/v1/documents.json', {
             data: {
                 'fields[]': ['publication_date', 'title', 'html_url', 'agency_names', 'topics'],
-                'per_page': 100,
+                'per_page': 500,
                 'page': page,
                 'conditions[type]': 'RULE',
-                'conditions[significant]': 1,
                 'conditions[publication_date][gte]': cra_tracker.start_date,
                 'conditions[publication_date][lte]': '2017-01-20',
             },
@@ -146,7 +151,7 @@ $(function(){
                     rows.push([reg.publication_date, '<a href="' + reg.html_url + '" target="_blank">' + reg.title + '</a>', reg.agency_names.join(', '), reg.topics.join(', ')]);
                 }
                 if (data.total_pages != page){
-                    cra_tracker.get_rules(page + 1);
+                    setTimeout(function(){cra_tracker.get_rules(page + 1)}, 50);
                 } 
                 if (cra_tracker.table === undefined){
                     cra_tracker.table = $('#cra_table').DataTable({
@@ -156,16 +161,17 @@ $(function(){
                             {title: 'Rule'},
                             {title: 'Agencies'},
                             {title: 'Topics'},
-                        ]
+                        ],
+                        order: [[0, 'desc']],
                     });
                 } else {
-                    for (var i = 0; i < rows.length; i++){
-                        cra_tracker.table.row.add(rows[i]).draw();
-                    }
+                    cra_tracker.table.rows.add(rows);
+                    setTimeout(cra_tracker.table.draw, 5);
                 }
             },
             error: function(problem){
                 console.log(problem);
+                setTimeout(function(){cra_tracker.get_rules(page)}, 1000);
             }
         });
     }
