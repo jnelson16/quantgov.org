@@ -56,12 +56,27 @@ component of the research. If you have used QuantGov or RegData in a research pr
     University, 2013.
 
 #### Non-Mercatus Research
+-   Babenko, Ilona, Viktar Fedaseyeu, and Song Zhang. ["Do CEOs Affect
+    Employees' Political Choices?"](https://ssrn.com/abstract=2814976)
+    September 2016.
 -   Barrage, Lint. [“Is Regulatory Rulemaking State-Contingent? An
     Empirical Analysis.”](http://lintbarrage.com/research)
     Working Paper. December 2014.
 -   Bessen, James. ["Accounting for Rising Corporate Profits: 
     Intangibles or Regulatory Rents?"](http://www.bu.edu/law/files/2016/05/Accounting-for-Rising-Corporate-Profits.pdf)
-    Boston University School of Law & Economics Working Paper. May 2016. 
+    Boston University School of Law & Economics Working Paper. May 2016.
+-   Brewer, Brady and Levi Russell. ["Impact of Dodd-Frank on Small Community
+    Lenders."](http://ageconsearch.umn.edu/bitstream/235986/2/Dodd%20Frank%20Lender%20Paper.pdf)
+    Agricultural & Applied Economics Association Annual Meeting. July 2016.
+-   Carboni, Marika and Franco Fiordelisi. ["Endogenous Political
+    Connections."](http://www.st-andrews.ac.uk/business/rbf/workingpapers/RBF17_003.pdf)
+    University of St. Andrews Working Papers in Responsible Banking and Finance. August 2016.
+-   Davis, Steven J. ["Regulatory Complexity and Policy Uncertainty:
+    Headwinds of Our Own Making."](https://papers.ssrn.com/sol3/papers2.cfm?abstract_id=2723980)
+    Becker Friedman Institute for Research in Economics Working Paper. January 2016.
+-   Drake, Michael S., Michael A. Mayberry, and Jaron H. Wilde. ["Presidential elections
+    and the market pricing of future earnings."](https://ssrn.com/abstract=2511461)
+    September 2014.
 -   Fouirnaies, Alexander and Andrew B. Hall. [“The Exposure Theory of
     Access: Why Some Firms Seek More Access to Incumbents Than
     Others.”](http://polmeth.wustl.edu/media/Paper/FouirnaiesHallRegulation.pdf) St.
@@ -77,13 +92,20 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Department of Accounting and Finance Working Paper AF2014/15WP05.
     Lancaster, UK: Lancaster University. 2014
 -   Gutierrez, German, Thomas Philippon. ["Investment-less Growth:
-    An Empirical Investigation"](http://www.nber.org/papers/w22897)
+    An Empirical Investigation."](http://www.nber.org/papers/w22897)
     NBER Working Paper. December 2016.
 -   Hall, Joshua C., Robert A. Lawson, and Saurav Roychoudhury.
     [“Creating the Environment for Entrepreneurship through Economic
     Freedom.”](http://www.be.wvu.edu/phd_economics/pdf/15-01.pdf) WVU
     Department of Economics Working Paper No. 15-01. Morgantown, WV:
     West Virginia University, 2015.
+-   Larch, Alexandra R. ["The Effect of Dodd-Frank on the Profitability of Community Banks:
+    An Econometric Model."](http://www.inquiriesjournal.com/a?id=1526)
+    Inquiries Journal. Vol. 9, No. 2. February 2017.
+-   Randolph, Gregory M. and James Fetzner. ["The Impact of Regulatory Accumulation
+    on U.S. Federal District Courts."](https://doi.org/10.1017/S1744137416000126)
+    Journal of Institutional Economics. Vol. 12, No. 3. December 2016.
+
 
 
 ### Short-Form Writings and Congressional Testimony
