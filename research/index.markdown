@@ -6,9 +6,9 @@ title: Research Featuring QuantGov Data
 The research papers, congressional testimonies, and other studies listed below used data derived from the QuantGov platform as a
 component of the research. If you have used QuantGov or RegData in a research project, please email us at <info@quantgov.org> to be added to this list.
 
-### Research Using QuantGov and RegData
+## Research Using QuantGov and RegData  
 
-#### Mercatus Research
+### Mercatus Research
 -   Bailey, James and Diana Thomas. [“Regulating Away Competition: The
     Effect of Regulation on Entrepreneurship and
     Employment.”](http://mercatus.org/publication/regulating-away-competition-effect-regulation-entrepreneurship-and-employment)
@@ -54,8 +54,9 @@ component of the research. If you have used QuantGov or RegData in a research pr
 -   Peirce, Hester and James Broughel. [Dodd-Frank: What It Does and Why
     It’s Flawed.]() Arlington, VA: Mercatus Center at George Mason
     University, 2013.
+    
 
-#### Non-Mercatus Research
+### Non-Mercatus Research
 -   Babenko, Ilona, Viktar Fedaseyeu, and Song Zhang. ["Do CEOs Affect
     Employees' Political Choices?"](https://ssrn.com/abstract=2814976)
     September 2016.
@@ -102,11 +103,13 @@ component of the research. If you have used QuantGov or RegData in a research pr
 -   Larch, Alexandra R. ["The Effect of Dodd-Frank on the Profitability of Community Banks:
     An Econometric Model."](http://www.inquiriesjournal.com/a?id=1526)
     Inquiries Journal. Vol. 9, No. 2. February 2017.
+-   Malone, Trey and Dustin Chambers. ["Quantifying Federal Regulatory Burdens in
+    the Beer Value Chain."](http://onlinelibrary.wiley.com/doi/10.1002/agr.21507/full)
+    Agribusiness Letters. Vol. 33, No. 1. March 2017.
 -   Randolph, Gregory M. and James Fetzner. ["The Impact of Regulatory Accumulation
     on U.S. Federal District Courts."](https://doi.org/10.1017/S1744137416000126)
     Journal of Institutional Economics. Vol. 12, No. 3. December 2016.
-
-
+    
 
 ### Short-Form Writings and Congressional Testimony
 
@@ -142,8 +145,8 @@ component of the research. If you have used QuantGov or RegData in a research pr
     Mason University, May 2014.
 -   McLaughlin, Patrick A. [“On the Human Costs of the US Regulatory
     System: Should Congress Pressure Agencies to Make Rules
-    Faster?”](http://mercatus.org/publication/human-costs-us-regulatory-system-should-congress-pressure-agencies-make-rules-faster) Testimony.
-    Arlington, VA: Mercatus Center at George Mason University,
+    Faster?”](http://mercatus.org/publication/human-costs-us-regulatory-system-should-congress-pressure-agencies-make-rules-faster) 
+    Testimony. Arlington, VA: Mercatus Center at George Mason University,
     August 2013.
 -   McLaughlin, Patrick A. [“Regulatory Statistics for the Railroad
     Sector from RegData
