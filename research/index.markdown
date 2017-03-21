@@ -110,6 +110,18 @@ component of the research. If you have used QuantGov or RegData in a research pr
 
 ### Short-Form Writings and Congressional Testimony
 
+-   Broughel, James and Oliver Sherouse. ["A Snapshot of Kentucky Regulation in
+    2015."](https://www.mercatus.org/publication/kentucky-regulation-2015) Policy Briefing.
+    Arlington, VA: Mercatus Center at George Mason University, September 2016.
+-   Broughel, James and Oliver Sherouse. ["A Snapshot of Virginia Regulation in
+    2016."](https://www.mercatus.org/publications/snapshot-virginia-regulation-2016) Policy Briefing.
+    Arlington, VA: Mercatus Center at George Mason University, January 2017.
+-   Broughel, James, Oliver Sherouse, and Daniel Francis. ["A Snapshot of Missouri Regulation in
+    2016."](https://www.mercatus.org/publications/snapshot-missouri-regulation-2016) Policy Briefing.
+    Arlington, VA: Mercatus Center at George Mason University, January 2017.
+-   Broughel, James, Oliver Sherouse, and Daniel Francis. ["A Snapshot of Illinois Regulation in
+    2017."](https://www.mercatus.org/publications/snapshot-illinois-regulation-2017) Policy Briefing.
+    Arlington, VA: Mercatus Center at George Mason University, March 2017.
 -   Carew, Diana. [“FDA Regulation in the Data-Driven
     Economy.”](http://www.progressivepolicy.org/wp-content/uploads/2014/10/2014.10-Carew_FDA-Regulation-in-the-Data-Driven-Economy.pdf)
     Policy Memo. Washington, DC: Progressive Policy Institute,
